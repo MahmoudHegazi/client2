@@ -400,11 +400,33 @@ body {
 <script>
 let mynav_items = document.getElementById("myNav");
 let nav_container = document.getElementById("showthis_div");
+
+function make_text_hider() {
+  get_texts = document.querySelectorAll(".flex_item");
+  get_texts.forEach( (elm) => { 
+    elm.style.color = "transparent";
+  })
+}
+
+function show_text_hider() {
+  get_texts = document.querySelectorAll(".flex_item");
+  get_texts.forEach( (elm) => { 
+    elm.style.color = "white";
+  })
+}
+
+
 function openNav() {
 
   mynav_items.style.display = "block"; 
-  mynav_items.style.height = "100%";
-  mynav_items.style.padding = "50px";
+ make_text_hider();
+  mynav_items.style.color = "gold";
+  mynav_items.style.height = "0%";
+  
+  setTimeout(function(){ 
+  show_text_hider();
+  mynav_items.style.height = "100%"; }, 300);
+
  
 }
 
