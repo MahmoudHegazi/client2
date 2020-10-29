@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <style>
+
+
+.navbar {
+  background-color: rgba(52, 73, 94, 0.6) !important;
+  height: 150px !important;
+  display: block;
+}
+
+.text-white {
+  font-family: sans-serif;
+  font-size: 2.5vw;
+color: white !important;
+}
+
+
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 10000px;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: auto;
+  transition: 0.5s;
+  background-color: rgba(66, 93, 120, 0.95);
+
+}
+
+.overlay-content {
+  position: relative;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #d9d9d9;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 300px;
+  grid-template-rows: 3fr 2fr 2fr 1fr 1r;
+  grid-template-areas: 
+  "section1 section2 section3
+  section3 section4 section5
+  section6 section7 section8
+  section9 section10 section11"
+;
+  text-align: left;
+}
+
+.flex_container h2 {
+  font-weight: bold;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="get_header">
+
+
+<nav class="navbar navbar-expand-sm navbar-light">
+
+
+      <a class="nav-link" href="#"><img src="https://www.stjohnplessington.com/_site/images/design/logo_white.png"></a>
+
+
+      <a class="nav-link" href="#">
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+
+
+
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">   
+    
+
+
+	  
+	  <!-- end of more menu -->
+	  
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+
+
+
+
+</a>
+
+</nav>
+</div>
+
+<div id="showthis_div" style="">
+      <!-- start of more menu -->
+	  
+	  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content grid_container">
+  <!-- column one start -->
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Mission and Vision</a>
+    <a class="flex_item" href="#">Governing Body</a>
+    <a class="flex_item" href="#">Who's Who</a>
+    <a class="flex_item" href="#">Holidays and Key Dates</a>
+    <a class="flex_item" href="#">College Timetable</a>
+    <a class="flex_item" href="#">eSafety</a>
+    <a class="flex_item" href="#">School Information for Ofsted</a>
+    <a class="flex_item" href="#">Contact Us</a>
+    <a class="flex_item" href="#">Uniform</a>
+    <a class="flex_item" href="#">Class Charts</a>
+    <a class="flex_item" href="#">Staff Email</a>
+    
+   </div> 
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Achievements</h2></a>
+    <a class="flex_item" href="#">Examination Results 2018</a>
+    <a class="flex_item" href="#">Examination Results 2019</a>
+    <a class="flex_item" href="#">Examination Results 2020</a>
+    <a class="flex_item" href="#">Inspection Data Summary Report (IDSR)</a>
+    <a class="flex_item" href="#">Performance Tables</a>
+    <a class="flex_item" href="#">Progress 8 Explained</a>
+   </div> 
+   
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Inspection Reports</h2></a>
+    <a class="flex_item" href="#">Mission and Vision</a>
+    <a class="flex_item" href="#">Governing Body</a>
+    <a class="flex_item" href="#">Who's Who</a>
+    <a class="flex_item" href="#">Holidays and</a>
+    <a class="flex_item" href="#">College Timetable</a>
+    <a class="flex_item" href="#">eSafety</a>
+   </div> 
+   
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Learning Programmes</h2></a>
+    <a class="flex_item" href="#">Learning Programme Cycle 2020/21</a>
+    </div> 
+    
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Urgent News</h2></a>
+    <a class="flex_item" href="#"></a>
+    </div> 
+    
+    <!-- column one end -->
+    
+    
+    <!-- column two start -->
+    
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>SJP News</h2></a>
+    <a class="flex_item" href="#">Latest News</a>
+    <a class="flex_item" href="#">2020 - 2021 Newsletters</a>
+    <a class="flex_item" href="#">Urgent News</a>
+    <a class="flex_item" href="#">SEND</a>
+    <a class="flex_item" href="#">Extra Curricular Timetables</a>
+    <a class="flex_item" href="#">Latest Photos</a>    
+    <a class="flex_item" href="#">ParentMail</a>
+    <a class="flex_item" href="#">School Calendar</a>
+    </div> 
+
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Parent Information</h2></a>
+    <a class="flex_item" href="#">Year 7 Parent Handbook</a>
+    <a class="flex_item" href="#">Parent Handbook</a>
+    <a class="flex_item" href="#">Careers</a>
+    <a class="flex_item" href="#">GCSEs are Changing</a>
+    <a class="flex_item" href="#">How to apply for Free School Meals.</a>
+    <a class="flex_item" href="#">Letters from the College</a>
+    <a class="flex_item" href="#">National Citizen Service (NCS)</a>
+    <a class="flex_item" href="#">Open Events</a>
+    <a class="flex_item" href="#">Parental Documentation</a>
+    <a class="flex_item" href="#">Reading Support for Your Child</a>
+    <a class="flex_item" href="#">Supporting Child Mental Health</a>
+    <a class="flex_item" href="#">Travel Routes to College</a>
+    <a class="flex_item" href="#">Year 11 Destinations</a>
+    
+   </div> 
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Our Prospectus</h2></a>
+    <a class="flex_item" href="#">Videos</a>
+    <a class="flex_item" href="#">Mobile News & Events App</a>
+    <a class="flex_item" href="#">What People Say About Us</a>
+    <a class="flex_item" href="#">Prospectus 2020 - 21</a>
+    <a class="flex_item" href="#">Prospectus Supplement</a>
+    <a class="flex_item" href="#">Virtual Tour</a>
+    <a class="flex_item" href="#">About</a>
+   </div> 
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Vacancies</h2></a>
+    <a class="flex_item" href="#">Non-Teaching Vacancies</a>
+    <a class="flex_item" href="#">Teaching Vacancies</a>
+    <a class="flex_item" href="#">School Direct</a>
+   </div> 
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>HFCMAT Policies and Procedures</h2></a>
+    <a class="flex_item" href="#">Declarations of Interests (Holy Family Catholic MAT).</a>
+    <a class="flex_item" href="#">Reports and Accounts</a>
+    </div> 
+    
+    <!--end of column two -->
+    
+    <!-- start of column three -->
+    
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Services</a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    </div> 
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>SJP Wellbeing</h2></a>
+    <a class="flex_item" href="#">Depression and low mood</a>
+    <a class="flex_item" href="#">Anger Management</a>
+    <a class="flex_item" href="#">Anxiety and Stress</a>
+    <a class="flex_item" href="#">COVID-19 Support</a>
+    <a class="flex_item" href="#">Resources for pupils with SEND</a>
+    <a class="flex_item" href="#">Support services and contact details</a>    
+    <a class="flex_item" href="#">Trauma and Attachment</a>
+    <a class="flex_item" href="#">Wellbeing information and activities</a>
+    </div> 
+    
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Sixth Form</h2></a>
+    <a class="flex_item" href="#">Sixth Form Course Information</a>
+    <a class="flex_item" href="#">Sixth Form Application Form</a>
+    <a class="flex_item" href="#">Useful Websites</a>
+    <a class="flex_item" href="#">16-19 Bursary - Policy and Application Forms</a>
+    <a class="flex_item" href="#">Additional Support Timetables</a>
+    <a class="flex_item" href="#">Information Evening</a>
+    <a class="flex_item" href="#">Sixth Form Study Programme</a>
+    <a class="flex_item" href="#">UCAS Information Guide 2020</a>
+    <a class="flex_item" href="#">Uniform List</a>
+   </div> 
+   
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Alumni</h2></a>
+    <a class="flex_item" href="#">Alumni Profiles</a>
+   </div> 
+   
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Policies</h2></a>
+    <a class="flex_item" href="#">Clients</a>
+   </div> 
+   
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Harrison Catering</h2></a>
+    <a class="flex_item" href="#"></a>
+    </div> 
+    
+    
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>Staff Area</h2></a>
+    <a class="flex_item" href="#"></a>
+    </div> 
+    
+    
+    <!-- end of column three -->
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Alumni Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Alumni Profiles</a>
+    </div> 
+    
+    
+     <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Services</a>
+    <a class="flex_item" href="#">Latest Photos</a>    
+    <a class="flex_item" href="#">ParentMail</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">School Calendar</a>
+    <a class="flex_item" href="#">About</a>
+   </div> 
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+   </div> 
+   <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Alumni Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Alumni Profiles</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">About</a>
+   </div> 
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>  
+    </div> 
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Services</a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    </div> 
+    <div class="grid_item flex_container">
+    <a class="flex_item" href="#"><h2>About Us</h2></a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class	="flex_item" href="#">About</a>
+    <a class="flex_item" href="#">Services</a>
+    <a class="flex_item" href="#">Clients</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>    
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    <a class="flex_item" href="#">Contact</a>
+    </div> 
+
+</div>
+</body>
+</html>
+<script>
+let mynav_items = document.getElementById("myNav");
+let nav_container = document.getElementById("showthis_div");
+function openNav() {
+
+  mynav_items.style.display = "block"; 
+  mynav_items.style.height = "100%";
+  mynav_items.style.padding = "50px";
+ 
+}
+
+function closeNav() {
+  mynav_items.style.height = "0%";
+  setTimeout(function(){ mynav_items.style.display = "none"; }, 300);
+  
+}
+</script>
