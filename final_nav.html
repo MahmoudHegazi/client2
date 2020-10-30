@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  
+  
+  /* tablet */
+
+
+
+  .text_next_icon {
+    color: white;
+  }
+  .menu_next_icon {
+    color: white;
+    line-height: 14px;
+    font-size: 1.25em;
+    text-transform: uppercase;
+  
+  }  
+  
+.nav_h1 {
+  margin-left:8px;margin-top:4px;font-size: 2vw;
+}
+
+  .title_change {
+    display: inline;
+  }
+
+
+@media only screen and (max-width: 479px) {
+  .right_icons {
+
+   display: none;
+  }
+  .right_icons img {
+          width: 20px;
+  }
+  .text_next_icon {
+    display: none;
+  }
+  .menu_next_icon {
+    display: none;
+  }
+  .title_change {
+    display: block;
+  }
+
+.nav_h1 {
+  font-size: 3vw;
+}
+
+}
+
+
+/* tablet */
+@media only screen and (min-width: 480px) {
+  /* For tablets: */
+  .right_icons  {
+   
+   padding: 8px;
+  }
+  
+  .right_icons img  {
+
+  }
+ 
+  /* hide  the text next wings */
+  .text_next_icon {
+    display: none;
+  }
+  .menu_next_icon {
+    display: none;
+  }
+    .title_change {
+    display: block;
+  }
+
+ 
+}
+
+
+
+/* tablet  larger */
+@media only screen and (min-width: 1030px) {
+
+  /* show  the text next wings */
+  .text_next_icon {
+    display: inline;
+  }
+  .menu_next_icon {
+    display: inline;
+  }
+ 
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .nav_h1 {
+  margin-left:8px;margin-top:4px;font-size: 3vw;
+}
+
+    .title_change {
+    display: inline;
+  }
+
+}
+
+
+  </style>
+</head>
+<body style="height:1500px">
+
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  
+  <a class="navbar-brand" href="#" style="font-size:2vw;">
+  
+   <div style="display: flex;">
+  <img src="https://www.stjohnplessington.com/_site/images/design/logo_white.png"> 
+  
+  <h1 id="the_nav_h1" class="nav_h1" style="">St John Plessington <span class="title_change">Catholic College</span></h1>
+  </div>
+  
+  
+  </a>
+
+   <div id="right_container" style="display:flex;margin-left:auto;">
+   
+   <span class="aline_img"></span>
+      <a class="nav-link right_icons" href="#" ><img  src="https://www.stjohnplessington.com/_site/images/design/kite_white.png" height="100%"></a>
+      
+      
+      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/twitter_white.png" height="100%"></a>
+      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/facebook_white.png" height="100%"></a>
+      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png" height="100%"> <span class="text_next_icon"> SJP Teaching School Alliance</span></a>
+      
+      <div style="padding-top: 5px;">
+      <a class="nav-link" href="#" ><i class="fa fa-bars doit" style="font-size:25px;color:white;"></i> <span class="menu_next_icon" >Menu</span></a>
+      </div>
+   </div>
+   
+  </ul>
+</nav>
+
+
+
+<div class="container-fluid"><br>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+</div>
+
+</body>
+</html>
+
+
