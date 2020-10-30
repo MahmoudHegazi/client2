@@ -10,6 +10,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+  
+  
+  /* tablet */
+
+
+
   .text_next_icon {
     color: white;
   }
@@ -21,10 +27,25 @@
   
   }  
   
+.nav_h1 {
+  margin-left:8px;margin-top:4px;font-size: 2vw;
+}
 
-@media only screen and (max-width: 680px) {
+  .title_change {
+    display: inline;
+  }
+
+
+.hover_nav_item:hover {
+  background-color: rgb(220 220 255);
+}
+@media only screen and (max-width: 479px) {
   .right_icons {
 
+   display: none;
+  }
+  .right_icons img {
+          width: 20px;
   }
   .text_next_icon {
     display: none;
@@ -32,6 +53,68 @@
   .menu_next_icon {
     display: none;
   }
+  .title_change {
+    display: block;
+  }
+
+.nav_h1 {
+  font-size: 3vw;
+}
+
+}
+
+
+/* tablet */
+@media only screen and (min-width: 480px) {
+  /* For tablets: */
+  .right_icons  {
+   
+   padding: 8px;
+  }
+  
+  .right_icons img  {
+
+  }
+ 
+  /* hide  the text next wings */
+  .text_next_icon {
+    display: none;
+  }
+  .menu_next_icon {
+    display: none;
+  }
+    .title_change {
+    display: block;
+  }
+
+ 
+}
+
+
+
+/* tablet  larger */
+@media only screen and (min-width: 1030px) {
+
+  /* show  the text next wings */
+  .text_next_icon {
+    display: inline;
+  }
+  .menu_next_icon {
+    display: inline;
+  }
+ 
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .nav_h1 {
+  margin-left:8px;margin-top:4px;font-size: 3vw;
+}
+
+    .title_change {
+    display: inline;
+  }
+
 }
 
 
@@ -41,14 +124,14 @@
 
 
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<nav id="lovely_nav" class="navbar navbar-expand-sm  navbar-dark sticky-top" style="background-color:rgba(52, 73, 94, 0.6);">
   
   <a class="navbar-brand" href="#" style="font-size:2vw;">
   
-   <div style="display: flex;">
+   <div style="display: flex;" >
   <img src="https://www.stjohnplessington.com/_site/images/design/logo_white.png"> 
   
-  <h1 style="margin-left:8px;margin-top:4px;">St John Plessington <span>Catholic College</span></h1>
+  <h1 id="the_nav_h1" class="nav_h1" style="">St John Plessington <span class="title_change" style="color:#ccc">Catholic College</span></h1>
   </div>
   
   
@@ -56,15 +139,16 @@
 
    <div id="right_container" style="display:flex;margin-left:auto;">
    
-      <a class="nav-link right_icons" href="#" ><img  src="https://www.stjohnplessington.com/_site/images/design/kite_white.png" height="100%"></a>
+   <span class="aline_img"></span>
+      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon1"  src="https://www.stjohnplessington.com/_site/images/design/kite_white.png" height="100%"></a>
       
       
-      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/twitter_white.png" height="100%"></a>
-      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/facebook_white.png" height="100%"></a>
-      <a class="nav-link right_icons" href="#" ><img src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png" height="100%"> <span class="text_next_icon"> SJP Teaching School Alliance</span></a>
+      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon2" src="https://www.stjohnplessington.com/_site/images/design/twitter_white.png" height="100%"></a>
+      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon3" src="https://www.stjohnplessington.com/_site/images/design/facebook_white.png" height="100%"></a>
+      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon4" src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png"> <span class="text_next_icon"> SJP Teaching School <span style="color:#ccc">Alliance</span></span></a>
       
-      <div style="padding-top: 5px;">
-      <a class="nav-link" href="#" ><i class="fa fa-bars doit" style="font-size:25px;color:white;"></i> <span class="menu_next_icon" >Menu</span></a>
+      <div style="padding-top: 5px;height:100%;" class="hover_nav_item">
+      <a class="nav-link" href="#" ><i id="lines_icon" class="fa fa-bars doit" style="font-size:25px;color:white;"></i> <span class="menu_next_icon" >Menu</span></a>
       </div>
    </div>
    
@@ -79,6 +163,27 @@
   <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
   <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
 </div>
+<i class="fa fa-facebook-f" style="font-size:24px;color:blue;"></i>
+<script>
+
+const mynav = document.getElementById("lovely_nav");
+const icon1 = document.getElementById("nav_icon1");
+const icon2 = document.getElementById("nav_icon2");
+const icon3 = document.getElementById("nav_icon3");
+const icon4 = document.getElementById("nav_icon4");
+const icon5 = document.getElementById("lines_icon");
+const the_h1 = document.getElementById("the_nav_h1");
+window.addEventListener("scroll", () => {
+  mynav.style.background = "white";
+  icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite.png";
+  icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter.png";
+  icon3.outerHTML = '<i class="fa fa-facebook-f" style="font-size:24px;color:#254d74;margin-top:5px;"></i>';
+  icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small.png";
+  the_h1.style.color = "black";
+  icon5.style.color = "#34495e";
+});
+
+</script>
 
 </body>
 </html>
