@@ -179,12 +179,12 @@ const text_wings = document.querySelector('.text_next_icon');
 const text_menu = document.querySelector('.menu_next_icon');
 
 
-
-window.addEventListener("scroll", () => {
-  mynav.style.background = "white";
+window.addEventListener('scroll', () => {
+  if (window.scrollY) {
+      mynav.style.background = "white";
   icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite.png";
   icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter.png";
-  icon3.outerHTML = '<i class="fa fa-facebook-f" style="font-size:24px;color:#254d74;margin-top:5px;"></i>';
+
   
 
   icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small.png";
@@ -193,8 +193,28 @@ window.addEventListener("scroll", () => {
   icon5.style.color = "#34495e";
   text_wings.style.color = "#34495e";
   text_menu.style.color = "#34495e";
-  the_logo.src = "https://www.stjohnplessington.com/_site/images/design/logo.png"
+  the_logo.src = "https://www.stjohnplessington.com/_site/images/design/logo.png";
+    
+    
+    
+  }  else {
+    mynav.style.background = "rgba(52, 73, 94, 0.6)";
+    icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite_white.png";
+  icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter_white.png";
+ 
+
+  icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png";
+  
+  the_h1.style.color = "white";
+  icon5.style.color = "white";
+  text_wings.style.color = "white";
+  text_menu.style.color = "white";
+  the_logo.src = "https://www.stjohnplessington.com/_site/images/design/logo_white.png";
+  }
 });
+
+
+
 
 </script>
 
