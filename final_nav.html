@@ -198,6 +198,10 @@
 <body style="height:1500px">
 
 
+<nav id="not_lovely_nav" class="navbar navbar-expand-sm  navbar-dark sticky-top" style="background-color:rgba(52, 73, 94, 0.6);width:10%;margin-left:auto;display:none;">
+ <a id="closing_button" href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=""><i class="fa fa-close" style="font-size:36px;color:white;"></i></a>
+
+</nav>
 
 <nav id="lovely_nav" class="navbar navbar-expand-sm  navbar-dark sticky-top" style="background-color:rgba(52, 73, 94, 0.6);">
   
@@ -222,7 +226,12 @@
       <a id="lik_img4" class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon4" src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png"> <span class="text_next_icon" > SJP Teaching School <span style="color:#ccc">Alliance</span></span></a>
       
       <div id="more_menu_div" style="padding-top: 5px;height:100%;" class="hover_nav_item" onclick="openNav()">
-      <a class="nav-link" href="#" ><i id="lines_icon" class="fa fa-bars doit" style="font-size:25px;color:white;"></i> <span class="menu_next_icon" >Menu</span></a>
+      
+      
+      
+      <a class="nav-link" style=""><i id="lines_icon" class="fa fa-bars doit" style="font-size:25px;color:white;" onclick="openNav()"></i> <span class="menu_next_icon" onclick="openNav()">Menu</span> </a>
+      
+      
       </div>
    </div>
    
@@ -246,7 +255,15 @@
       <!-- start of more menu -->
 	  
 	  <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <div class="overlay-content grid_container">
   <!-- column one start -->
     <div class="grid_item flex_container">
@@ -483,6 +500,9 @@
 <script>
 
 const mynav = document.getElementById("lovely_nav");
+const clossing_nav = document.getElementById("not_lovely_nav");
+
+
 const icon1 = document.getElementById("nav_icon1");
 const icon2 = document.getElementById("nav_icon2");
 const icon3 = document.getElementById("nav_icon3");
@@ -495,6 +515,8 @@ const link2 = document.getElementById("lik_img2");
 const link3 = document.getElementById("lik_img3");
 const link4 = document.getElementById("lik_img4");
 
+const closing_btn = document.getElementById("closing_button");
+const lines_arrow = document.getElementById("lines_icon");
 
 const the_h1 = document.getElementById("the_nav_h1");
 const the_logo = document.getElementById("the_logo_img");
@@ -547,6 +569,7 @@ icon3.src = "https://www.stjohnplessington.com/_site/images/design/facebook_whit
 
 /* more menu script */
 
+
 let mynav_items = document.getElementById("myNav");
 let nav_container = document.getElementById("showthis_div");
 
@@ -567,34 +590,10 @@ function show_text_hider() {
 
 function openNav() {
   
-  mynav.style.width = "100px";
-  mynav.style.marginLeft = "auto";
-  more_div.style.display = "block";
-  more_div.style.background = "black";
-
-   icon1.style.display = "none";
-  icon2.style.display = "none";
-
-icon3.style.display = "none";
-icon4.style.display = "none";
-
-  link1.style.display = "none";
-  link2.style.display = "none";
-  link3.style.display = "none";
-  link4.style.display = "none";
-
+  clossing_nav.style.display = "block";
+  mynav.style.display = "none";
   
-  the_h1.style.display = "none";
-  text_wings.style.display = "none";
-  text_menu.style.display = "none";
-  the_logo.style.display = "none";
-  
-  
-  
-  
-  
-  
-  
+  mynav_items.style.display = "block"; 
  make_text_hider();
   mynav_items.style.color = "gold";
   mynav_items.style.height = "0%";
@@ -608,7 +607,12 @@ icon4.style.display = "none";
 
 function closeNav() {
   mynav_items.style.height = "0%";
-  setTimeout(function(){ mynav_items.style.display = "none"; }, 300);
+  setTimeout(function(){ mynav_items.style.display = "none";
+  
+  clossing_nav.style.display = "none";
+  mynav.style.display = "flex";
+  
+  }, 300);
   
 }
 
