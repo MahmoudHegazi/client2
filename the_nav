@@ -18,6 +18,7 @@
 
   .text_next_icon {
     color: white;
+    font-weight: bold;
   }
   .menu_next_icon {
     color: white;
@@ -145,7 +146,7 @@
       
       <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon2" src="https://www.stjohnplessington.com/_site/images/design/twitter_white.png" height="100%"></a>
       <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon3" src="https://www.stjohnplessington.com/_site/images/design/facebook_white.png" height="100%"></a>
-      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon4" src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png"> <span class="text_next_icon"> SJP Teaching School <span style="color:#ccc">Alliance</span></span></a>
+      <a class="nav-link right_icons hover_nav_item" href="#" ><img id="nav_icon4" src="https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png"> <span class="text_next_icon" > SJP Teaching School <span style="color:#ccc">Alliance</span></span></a>
       
       <div style="padding-top: 5px;height:100%;" class="hover_nav_item">
       <a class="nav-link" href="#" ><i id="lines_icon" class="fa fa-bars doit" style="font-size:25px;color:white;"></i> <span class="menu_next_icon" >Menu</span></a>
@@ -163,7 +164,7 @@
   <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
   <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
 </div>
-<i class="fa fa-facebook-f" style="font-size:24px;color:blue;"></i>
+
 <script>
 
 const mynav = document.getElementById("lovely_nav");
@@ -173,14 +174,22 @@ const icon3 = document.getElementById("nav_icon3");
 const icon4 = document.getElementById("nav_icon4");
 const icon5 = document.getElementById("lines_icon");
 const the_h1 = document.getElementById("the_nav_h1");
+const text_wings = document.querySelector('.text_next_icon');
+const text_menu = document.querySelector('.menu_next_icon');
+
 window.addEventListener("scroll", () => {
   mynav.style.background = "white";
   icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite.png";
   icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter.png";
   icon3.outerHTML = '<i class="fa fa-facebook-f" style="font-size:24px;color:#254d74;margin-top:5px;"></i>';
+  
+
   icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small.png";
+
   the_h1.style.color = "black";
   icon5.style.color = "#34495e";
+  text_wings.style.color = "#34495e";
+  text_menu.style.color = "#34495e";
 });
 
 </script>
