@@ -185,6 +185,7 @@ window.addEventListener('scroll', () => {
   icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite.png";
   icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter.png";
 
+icon3.src = "https://github.com/MahmoudHegazi/hello-world/blob/master/facebook_blue.png?raw=true";
   
 
   icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small.png";
@@ -201,7 +202,10 @@ window.addEventListener('scroll', () => {
     mynav.style.background = "rgba(52, 73, 94, 0.6)";
     icon1.src = "https://www.stjohnplessington.com/_site/images/design/kite_white.png";
   icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter_white.png";
+  
+  icon2.src = "https://www.stjohnplessington.com/_site/images/design/twitter_white.png";
  
+icon3.src = "https://www.stjohnplessington.com/_site/images/design/facebook_white.png";
 
   icon4.src = "https://www.stjohnplessington.com/_site/images/design/tsa_small_white.png";
   
