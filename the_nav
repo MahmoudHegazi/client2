@@ -130,7 +130,7 @@
   <a class="navbar-brand" href="#" style="font-size:2vw;">
   
    <div style="display: flex;" >
-  <img src="https://www.stjohnplessington.com/_site/images/design/logo_white.png"> 
+  <img id="the_logo_img" src="https://www.stjohnplessington.com/_site/images/design/logo_white.png"> 
   
   <h1 id="the_nav_h1" class="nav_h1" style="">St John Plessington <span class="title_change" style="color:#ccc">Catholic College</span></h1>
   </div>
@@ -174,8 +174,11 @@ const icon3 = document.getElementById("nav_icon3");
 const icon4 = document.getElementById("nav_icon4");
 const icon5 = document.getElementById("lines_icon");
 const the_h1 = document.getElementById("the_nav_h1");
+const the_logo = document.getElementById("the_logo_img");
 const text_wings = document.querySelector('.text_next_icon');
 const text_menu = document.querySelector('.menu_next_icon');
+
+
 
 window.addEventListener("scroll", () => {
   mynav.style.background = "white";
@@ -190,6 +193,7 @@ window.addEventListener("scroll", () => {
   icon5.style.color = "#34495e";
   text_wings.style.color = "#34495e";
   text_menu.style.color = "#34495e";
+  the_logo.src = "https://www.stjohnplessington.com/_site/images/design/logo.png"
 });
 
 </script>
